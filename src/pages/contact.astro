@@ -1,0 +1,363 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact Us | Do It"
+  activePage="Contact"
+  description="Ready to Do It? Let's talk. Start executing your project today."
+>
+  <section class="pt-36 pb-20 px-6 min-h-screen asymmetric-bg select-none">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-20 reveal">
+        <span
+          class="text-[10px] uppercase tracking-[0.2em] font-bold text-accent flex items-center gap-4 mb-6"
+        >
+          <span class="w-16 h-[2px] bg-primary"></span>
+          Action Starts Here</span
+        >
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold tracking-wide leading-tight mb-6 max-w-3xl"
+        >
+          Ready to
+          <span
+            class="text-transparent bg-clip-text bg-linear-to-r from-on-secondary-container to-[#4675c0]"
+            >Do It?</span
+          >
+          <br />
+          Let's talk
+        </h1>
+
+        <p
+          class="text-on-surface-variant text-lg md:text-xl max-w-2xl font-light"
+        >
+          Stop planning and start executing, Our team is ready to turn your
+          project requirements into reality today
+        </p>
+      </div>
+
+      <div class="flex justify-center items-center flex-col">
+        <div
+          class="glass-card p-8 md:p-12 rounded-[2rem] relative overflow-hidden flex items-center justify-center w-fit"
+        >
+          <form
+            class="space-y-8 relative z-10"
+            id="contact-form"
+            action="https://formspree.io/f/mojpkjwz"
+            method="POST"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-2 group">
+                <label
+                  class="text-[10px] uppercase tracking-[0.3em] ml-5 text-accent font-bold"
+                  >Your Name</label
+                >
+                <div class="input-glow rounded-full">
+                  <input
+                    name="name"
+                    required
+                    class="w-full bg-white/3 border border-white/10 rounded-full py-3 px-6 text-on-surface placeholder:text-neutral-600 focus:ring-1 focus:ring-accent transition-all duration-300 outline-none"
+                    placeholder="Agent of Change"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="text-[10px] uppercase tracking-[0.3em] ml-5 text-accent font-bold"
+                  >Work Email</label
+                >
+                <div class="input-glow rounded-full">
+                  <input
+                    name="email"
+                    required
+                    class="w-full bg-white/3 border border-white/10 rounded-full py-3 px-6 text-on-surface placeholder:text-neutral-600 focus:ring-1 focus:ring-accent transition-all duration-300 outline-none"
+                    placeholder="you@impact.com"
+                    type="email"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-3 relative" id="action-area-container">
+              <label
+                class="text-[10px] uppercase tracking-[0.3em] ml-5 font-black text-accent opacity-80"
+              >
+                Action Area
+              </label>
+
+              <input
+                type="hidden"
+                name="action_area"
+                id="action_area_input"
+                value=""
+              />
+
+              <button
+                type="button"
+                id="action-dropdown-button"
+                class="w-full flex items-center justify-between bg-white/3 backdrop-blur-md border border-white/10 rounded-2xl px-8 py-3 text-white outline-none transition-all shadow-inner hover:bg-white/6"
+              >
+                <span
+                  id="action-selected-text"
+                  class="text-neutral-500 text-left">Select Action Area</span
+                >
+                <span
+                  class="material-symbols-outlined text-white/40 transition-transform duration-300"
+                  id="action-arrow">expand_more</span
+                >
+              </button>
+
+              <div
+                id="action-dropdown-menu"
+                class="absolute z-50 left-0 right-0 top-[105%] opacity-0 pointer-events-none translate-y-[-10px] transition-all duration-300 bg-[#0a0f1a] backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] flex flex-col"
+              >
+                <ul class="py-2 text-white m-0">
+                  <li
+                    class="action-option px-8 py-3 text-white/70 hover:text-white hover:bg-primary/20 cursor-pointer transition-colors"
+                    data-value="Rapid Product Development"
+                  >
+                    Rapid Product Development
+                  </li>
+                  <li
+                    class="action-option px-8 py-3 text-white/70 hover:text-white hover:bg-primary/20 cursor-pointer transition-colors"
+                    data-value="Immediate Tech Overhaul"
+                  >
+                    Immediate Tech Overhaul
+                  </li>
+                  <li
+                    class="action-option px-8 py-3 text-white/70 hover:text-white hover:bg-primary/20 cursor-pointer transition-colors"
+                    data-value="Scale on Demand"
+                  >
+                    Scale on Demand
+                  </li>
+                  <li
+                    class="action-option px-8 py-3 text-white/70 hover:text-white hover:bg-primary/20 cursor-pointer transition-colors"
+                    data-value="Just Do It (Consulting)"
+                  >
+                    Just Do It (Consulting)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label
+                class="text-[10px] uppercase tracking-[0.3em] ml-5 text-accent font-bold"
+                >The Brief</label
+              >
+              <div class="input-glow rounded-xl">
+                <textarea
+                  name="message"
+                  required
+                  class="w-full bg-white/3 border border-white/10 rounded-xl py-4 px-6 text-on-surface placeholder:text-neutral-600 focus:ring-1 focus:ring-accent transition-all duration-300 resize-none outline-none"
+                  placeholder="What are we doing? Give us the essentials..."
+                  rows="5"></textarea>
+              </div>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4"
+            >
+              <div
+                class="flex items-center space-x-3 text-xs text-on-surface-variant"
+              >
+                <span class="material-symbols-outlined text-sm text-accent"
+                  >speed</span
+                >
+                <span>High-priority response protocol active</span>
+              </div>
+              <button
+                id="submit-btn"
+                class="w-full sm:w-auto bg-primary text-on-primary font-bold py-4 px-10 rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-sm tracking-tight"
+                type="submit"
+              >
+                Make It Happen
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div
+          class="mt-20 md:w-[45%] w-full p-8 border-l-2 border-accent bg-accent/10 rounded-xl reveal"
+        >
+          <p class="text-on-surface-variant italic font-light text-lg">
+            "Decisiveness is the catalyst for success. We trigger action within
+            2 hours of your signal"
+          </p>
+          <p
+            class="text-accent text-xs font-bold uppercase tracking-widest mt-2"
+          >
+            — Do It HQ
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import Swal from "sweetalert2";
+
+  function setupForm() {
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const actionBtn = document.getElementById("action-dropdown-button");
+    const actionMenu = document.getElementById("action-dropdown-menu");
+    const actionArrow = document.getElementById("action-arrow");
+    const actionInput = document.getElementById(
+      "action_area_input",
+    ) as HTMLInputElement;
+    const actionSelectedText = document.getElementById("action-selected-text");
+    const actionOptions = document.querySelectorAll(".action-option");
+    const container = document.getElementById("action-area-container");
+    const submitBtn = document.getElementById(
+      "submit-btn",
+    ) as HTMLButtonElement;
+
+    if (!form || !submitBtn) return;
+
+    if (actionBtn && actionMenu) {
+      actionBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        actionMenu.classList.toggle("opacity-0");
+        actionMenu.classList.toggle("pointer-events-none");
+        actionMenu.classList.toggle("translate-y-[-10px]");
+        actionArrow?.classList.toggle("rotate-180");
+      });
+    }
+
+    actionOptions.forEach((option) => {
+      option.addEventListener("click", () => {
+        const val = option.getAttribute("data-value");
+        if (actionSelectedText) {
+          actionSelectedText.innerText = val || "";
+          actionSelectedText.classList.remove("text-neutral-500");
+          actionSelectedText.classList.add("text-white");
+        }
+        if (actionInput) actionInput.value = val || "";
+        actionMenu?.classList.add(
+          "opacity-0",
+          "pointer-events-none",
+          "translate-y-[-10px]",
+        );
+        actionArrow?.classList.remove("rotate-180");
+      });
+    });
+
+    window.addEventListener("click", (e) => {
+      if (container && !container.contains(e.target as Node)) {
+        actionMenu?.classList.add(
+          "opacity-0",
+          "pointer-events-none",
+          "translate-y-[-10px]",
+        );
+        actionArrow?.classList.remove("rotate-180");
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = `<span class="inline-block animate-pulse">Sending Signal...</span>`;
+      submitBtn.disabled = true;
+      submitBtn.classList.add("opacity-50");
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          Swal.fire({
+            icon: "success",
+            title: "Signal Received!",
+            text: "Our team will contact you within 2 hours.",
+            timer: 3000,
+            timerProgressBar: true,
+            showConfirmButton: false,
+            background: "#0a0f1a",
+            color: "#ffffff",
+            iconColor: "#4ade80",
+            width: window.innerWidth < 768 ? "90%" : "400px",
+            customClass: {
+              popup: "glass-alert",
+              title: "text-xl font-extrabold tracking-tight",
+              htmlContainer: "text-sm opacity-70",
+            },
+          });
+
+          form.reset();
+          if (actionSelectedText) {
+            actionSelectedText.innerText = "Select Action Area";
+            actionSelectedText.classList.add("text-neutral-500");
+          }
+          if (actionInput) actionInput.value = "";
+        } else {
+          throw new Error();
+        }
+      } catch (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Transmission Failed",
+          text: "The signal was lost. Please try again.",
+          timer: 3000,
+          timerProgressBar: true,
+          showConfirmButton: false,
+          background: "#0a0f1a",
+          color: "#ffffff",
+          iconColor: "#ef4444",
+          width: window.innerWidth < 768 ? "90%" : "400px",
+          customClass: {
+            popup: "glass-alert",
+          },
+        });
+      } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove("opacity-50");
+      }
+    });
+  }
+
+  setupForm();
+  document.addEventListener("astro:after-swap", setupForm);
+</script>
+
+<style is:global>
+  .glass-alert {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-radius: 2rem !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .swal2-timer-progress-bar {
+    background: rgba(74, 222, 128, 0.5) !important;
+    height: 6px !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 0 2rem 2rem !important;
+  }
+
+  .swal2-success-circular-line-left,
+  .swal2-success-circular-line-right,
+  .swal2-success-fix {
+    background-color: transparent !important;
+  }
+
+  @media (max-width: 768px) {
+    .swal2-popup {
+      margin-bottom: 2rem !important;
+    }
+  }
+</style>

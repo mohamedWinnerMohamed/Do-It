@@ -1,0 +1,316 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Portfolio | Do It"
+  activePage="Portfolio"
+  description="How we Do It: Our Success Stories. Explore our gallery of web applications and digital products."
+>
+  <section class="pt-36 pb-20 px-8 max-w-7xl mx-auto">
+    <header
+      class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 reveal"
+    >
+      <div class="max-w-3xl">
+        <span
+          class="text-[10px] uppercase tracking-[0.2em] font-bold text-accent flex items-center gap-4 mb-6"
+        >
+          <span class="w-16 h-[2px] bg-primary"></span>
+          Portfolio Selection</span
+        >
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold tracking-wide text-on-surface mb-6"
+        >
+          How we <span
+            class="text-transparent bg-clip-text bg-linear-to-r from-on-secondary-container to-[#4675c0]"
+            >Do It</span
+          > Our Success Stories
+        </h1>
+        <p class="text-lg text-on-surface-variant leading-relaxed">
+          We specialize in high-precision digital instruments. Explore our
+          gallery of web applications, liquid architectures, and high-end
+          e-commerce ecosystems built by the Do It team
+        </p>
+      </div>
+      <div class="flex items-center space-x-4 mb-2">
+        <div class="flex flex-col items-end">
+          <span
+            class="text-xs uppercase tracking-widest text-on-surface-variant font-bold"
+            >Scroll to Explore</span
+          >
+          <div class="h-px w-24 bg-linear-to-r from-transparent to-accent mt-2">
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
+      <a
+        href="https://productivity-system.netlify.app/"
+        target="_blank"
+        class="md:col-span-8 md:row-span-2 group/card relative overflow-hidden rounded-xl glass-card reveal block"
+      >
+        <img
+          class="absolute inset-0 w-full h-full object-cover opacity-50
+            blur-[3px] group-hover/card:blur-none group-hover/card:scale-105 group-hover/card:opacity-90
+            transition-all duration-700"
+          src="/Orbit-3.webp"
+          alt="Orbit Productivity System"
+        />
+
+        <div
+          class="absolute group-hover/card:inset-0
+          bg-linear-to-t from-background via-background/20 to-transparent
+          border border-transparent rounded-xl
+        group-hover/card:border-accent/50
+          transition-all duration-500 ease-out"
+        >
+        </div>
+
+        <div
+          class="absolute bottom-0 left-0 flex justify-between items-end p-8 w-full"
+        >
+          <div>
+            <span
+              class="text-xs uppercase tracking-widest text-accent font-bold mb-2 block"
+            >
+              Web Application
+            </span>
+
+            <h3 class="text-3xl font-bold mb-3">Orbit Productivity System</h3>
+
+            <p class="text-on-surface-variant max-w-md line-clamp-2">
+              The ultimate productivity system designed to help you stay
+              focused, organized, and achieve your goals every single day
+            </p>
+          </div>
+
+          <span
+            class="flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-blue-500
+          opacity-0 translate-y-2
+          group-hover/card:opacity-100 group-hover/card:translate-y-0
+          transition-all duration-500 ease-out"
+          >
+            View Case Study
+            <span
+              class="material-symbols-outlined text-sm group-hover/card:translate-x-2 transition-transform"
+            >
+              arrow_forward
+            </span>
+          </span>
+        </div>
+      </a>
+
+      <a
+        href="https://sanhour.elbahar.top/"
+        target="_blank"
+        class="md:col-span-4 md:row-span-2 relative overflow-hidden rounded-xl group/card glass-card reveal block"
+      >
+        <img
+          class="absolute inset-0 object-cover opacity-50 blur-[3px]
+            group-hover/card:scale-105 group-hover/card:opacity-90 group-hover/card:blur-none
+            transition-all duration-700"
+          src="/Sanhor.jpg"
+          alt="Sanhor Village"
+        />
+        <div
+          class="absolute group-hover/card:inset-0 bg-linear-to-t from-surface-container-low to-transparent border border-transparent rounded-xl
+        group-hover/card:border-accent/50
+          transition-all duration-500 ease-out"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 left-0 flex justify-between items-end w-full p-6"
+        >
+          <div>
+            <span
+              class="text-[10px] uppercase tracking-widest text-accent font-bold mb-2 block"
+              >Village Digital Platform</span
+            >
+            <h3 class="text-2xl font-bold mb-4 text-white">Sanhor Village</h3>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center glow-icon"
+              >
+                <span class="material-symbols-outlined text-accent"
+                  >construction</span
+                >
+              </div>
+              <div
+                class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center glow-icon"
+              >
+                <span class="material-symbols-outlined text-accent">domain</span
+                >
+              </div>
+            </div>
+          </div>
+          <span
+            class="flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-blue-500
+         opacity-0 translate-y-2
+         group-hover/card:opacity-100 group-hover/card:translate-y-0
+         transition-all duration-500 ease-out"
+          >
+            View Case Study
+            <span
+              class="material-symbols-outlined text-sm group-hover/card:translate-x-2 transition-transform"
+            >
+              arrow_forward
+            </span>
+          </span>
+        </div>
+      </a>
+      <a
+        href="https://e-commerc-2.netlify.app/"
+        target="_blank"
+        class="md:col-span-6 md:row-span-1 relative overflow-hidden rounded-xl glass-card group/card reveal"
+      >
+        <img
+          class="absolute inset-0 object-cover mt-2
+          opacity-20 blur-[3px] scale-105
+          group-hover/card:blur-none
+          group-hover/card:scale-110
+          group-hover/card:opacity-90
+          transition-all duration-700"
+          src="/ecommerce.png"
+          alt="Focus Laser"
+        />
+        <div
+          class="absolute group-hover/card:inset-0 bg-linear-to-r from-surface-container-low to-transparent border border-transparent group-hover/card:border-accent/80 rounded-xl transition-all duration-500 ease-out"
+        >
+        </div>
+        <div class="relative h-full flex items-center p-8 gap-6">
+          <div
+            class="w-24 h-24 rounded-xl bg-linear-to-br from-primary to-primary-light shrink-0 flex items-center justify-center shadow-lg shadow-primary/20"
+          >
+            <span class="material-symbols-outlined text-accent">storefront</span
+            >
+          </div>
+          <div>
+            <span
+              class="text-[10px] uppercase tracking-widest text-accent font-bold mb-1 block"
+              >E-commerce</span
+            >
+            <h3 class="text-2xl font-bold mb-2">Shopee v2.0</h3>
+            <p
+              class="text-on-surface-variant group-hover/card:text-white text-sm line-clamp-1"
+            >
+              Style delivered straight to your door
+            </p>
+          </div>
+        </div>
+      </a>
+      <a
+        href="https://www.focuslasereg.com/"
+        target="_blank"
+        class="md:col-span-6 md:row-span-1 relative overflow-hidden rounded-xl group/card glass-card reveal"
+      >
+        <img
+          class="absolute inset-0 w-full h-full object-cover ml-4 opacity-20 blur-[3px] group-hover/card:blur-none group-hover/card:scale-105 group-hover/card:opacity-90
+            transition-all duration-700"
+          src="/focus laser.jpg"
+          alt="Focus Laser"
+        />
+        <div
+          class="absolute group-hover/card:inset-0 bg-linear-to-r from-background to-transparent border border-transparent group-hover/card:border-accent/50 rounded-xl"
+        >
+        </div>
+
+        <div
+          class="relative h-full flex flex-col justify-center p-8 md:gap-8 items-start"
+        >
+          <div class="">
+            <span
+              class="text-[10px] uppercase tracking-widest text-accent font-bold mb-1 block"
+            >
+              Electronics Platform</span
+            >
+            <h3 class="text-3xl font-bold my-2">Focus Laser</h3>
+            <p class="text-on-surface-variant text-sm md:w-1/3">
+              Your go-to platform for laser machines, combining quality and
+              reliability
+            </p>
+          </div>
+          <span
+            class="flex items-center space-x-2 text-sm font-bold uppercase tracking-wider text-blue-500
+         opacity-0 translate-y-2
+         group-hover/card:opacity-100 group-hover/card:translate-y-0
+         transition-all duration-500 ease-out"
+          >
+            View Case Study
+            <span
+              class="material-symbols-outlined text-sm group-hover/card:translate-x-2 transition-transform"
+            >
+              arrow_forward
+            </span>
+          </span>
+        </div>
+      </a>
+    </section>
+
+    <section class="my-32 reveal">
+      <div class="flex items-center justify-between mb-12">
+        <div>
+          <h2 class="text-3xl font-bold text-on-surface">
+            Experimental R&amp;D
+          </h2>
+          <p class="text-on-surface-variant mt-2">
+            Where we push the boundaries of interaction design.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        {
+          [
+            {
+              title: "Vertex Flow Engine",
+              desc: "A proprietary engine for 3D web visualizations with zero latency.",
+              tags: ["WebGPU", "WASM"],
+              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBhW7gfBOgKpTgTjku3jbohYenTGMm4htf4PCnurmFtAaN7r2FQeTVoFlsmdoXcLW9iWFO2sdunnzSTBBCgr0gzOM_zTxp_5D2_crGau-2Y9v-2SXOibenfYEsT80XpwUVeIrDtGsB7asbVTkqIxSN_TX6HDcaO1UcwTpGjgsECtonLrQxuZx5wKg0NwTWjful2V5-VmwFshil94N0bt2ObBi0rZhpZ-NdF3GV08_mn-84ESiaqX5jd42L8-fkFM1KDKwAvJYcYEQ",
+            },
+            {
+              title: "Neural Link Interface",
+              desc: "Bespoke dashboard for monitoring edge-computing nodes in real-time.",
+              tags: ["AI Ops", "Realtime"],
+              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuChLpq2v6idwi_9mFE-DNGGviVzsYA1ZJU3sOASNakzX3TNQm1Kn9JHiEsnCw4Z6OhMm10zn4koBkwoEXtAb9vmxQbayv4WtqcodgHR5ZVcY4K3g16MLWE1l3ZzNSK0c8-K3vsKX8DzYwdby7wu0j7BlCqL5VLvgClk3Z8jluuT0Bgo6ayDSQngcAXv2Y6ltgndQ-nOsQwD9JRwH5GheHbNP6rB_YlS0ptcESbARt_tlLU5mW2q7RjtUyOYEw0tAFUc9LrplXVG5w",
+            },
+            {
+              title: "Cognito Identity",
+              desc: "Secure, biometric-first authentication portal for luxury fintech.",
+              tags: ["Security", "Biometrics"],
+              img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAhrgsVMW0hpleQSCD1Sgovt8U3SNFtxQ7L1soOne3V4lQB1QTYM5dBUiWzD38xUwCfTjHBGAyQ2D9dP65QRzIaAa6p6rnOYlsrVGaVjnji0DiPd6TTizO1VMrkXmY0_0WVDGvs6TgYDqecuF6HjU7zsZWmjqmkkrI6VmBT3vy_lpORKdcmgVsiJ_eVFW_gARMx1Ue2ij07d6vRo05rF5R9l5TIjLxxxkAuw4egXoWZ0aW-fBK9Wbuh3EjGhmDUNpu6mq51-_ynvA",
+            },
+          ].map((card) => (
+            <div class=" shrink-0 md:w-[350px] w-[200px] md:h-[500px] h-[300px] rounded-xl glass-card overflow-hidden flex flex-col group/card">
+              <div class=" border border-transparent group-hover/card:border-accent/40 p-1 rounded-xl h-full ">
+                <div class="h-1/2 rounded-lg overflow-hidden">
+                  <img
+                    class="w-full h-full object-cover scale-105 group-hover/card:scale-100 transition-all rounded-lg duration-500 ease-in-out "
+                    src={card.img}
+                    alt={card.title}
+                  />
+                </div>
+                <div class="p-6 flex flex-col justify-between items-center md:items-start h-[50%]">
+                  <div>
+                    <h4 class="text-xs md:text-xl font-bold mb-2 text-center md:text-left">
+                      {card.title}
+                    </h4>
+                    <p class="text-on-surface-variant text-[10px] md:text-sm leading-relaxed text-center md:text-left">
+                      {card.desc}
+                    </p>
+                  </div>
+                  <div class="mt-6 flex gap-2">
+                    {card.tags.map((tag) => (
+                      <span class="text-[7px] md:text-[10px] text-accent font-bold uppercase tracking-widest px-2 py-1 bg-surface-container-highest/70 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+</BaseLayout>

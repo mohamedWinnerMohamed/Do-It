@@ -1,0 +1,148 @@
+---
+interface Props {
+  activePage: string;
+}
+const { activePage } = Astro.props;
+
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
+---
+
+<nav
+  id="main-nav"
+  class="fixed top-4 left-1/2 -translate-x-1/2 z-100 w-[92%] max-w-[900px] rounded-[2rem] md:rounded-full bg-neutral-900/40 backdrop-blur-[32px] border border-white/8 shadow-[0_8px_40px_0_rgba(0,0,0,0.5)]"
+  style="
+    box-shadow: 0 8px 40px 0 rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+    transition: max-width 0.7s cubic-bezier(0.4,0,0.2,1), top 0.7s cubic-bezier(0.4,0,0.2,1), background 0.7s ease, border-color 0.7s ease, box-shadow 0.7s ease, backdrop-filter 0.7s ease;
+  "
+>
+  <div
+    class="absolute inset-0 rounded-[2rem] overflow-hidden pointer-events-none"
+  >
+    <div
+      class="absolute top-0 left-0 right-0 h-1/2 bg-linear-to-b from-white/6 to-transparent"
+    >
+    </div>
+  </div>
+  <div
+    class="relative flex justify-between items-center px-6 py-3 md:px-8 md:py-3.5"
+  >
+    <a
+      href="/"
+      class="text-xl font-black tracking-tighter text-white uppercase font-[Manrope] z-10"
+    >
+      <img id="navbar-logo" src="/public/logo.png" alt="Do It Logo" class="w-14 h-12">
+    </a>
+    <div class="hidden md:flex items-center space-x-0.5 z-10">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "px-3 py-2 rounded-full text-[11px] lg:text-[12px] font-bold uppercase tracking-widest lg:tracking-[0.15em] transition-all duration-300",
+              activePage === link.name
+                ? "text-white bg-accent/15 shadow-[0_0_12px_rgba(5,38,89,0.3)]"
+                : "text-neutral-400 hover:text-white hover:bg-white/5",
+            ]}
+          >
+            {link.name}
+          </a>
+        ))
+      }
+    </div>
+    <a
+      href="/contact"
+      class="hidden md:inline-flex px-6 py-2.5 bg-primary text-on-primary rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-light active:scale-95 transition-all shadow-[0_0_20px_rgba(26,58,107,0.4)] z-10"
+    >
+      Let's Do It
+    </a>
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden p-2 text-neutral-400 hover:text-white transition-colors z-10"
+      aria-label="Toggle menu"
+    >
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden overflow-hidden" style="max-height: 0; opacity: 0; transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease;">
+    <div class="flex flex-col gap-2 px-6 pb-6 pt-2">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300",
+              activePage === link.name
+                ? "text-white bg-accent/10"
+                : "text-neutral-400 hover:text-white hover:bg-white/5",
+            ]}
+          >
+            {link.name}
+          </a>
+        ))
+      }
+      <a
+        href="/contact"
+        class="mt-2 px-4 py-3 bg-primary text-on-primary rounded-xl font-bold text-sm text-center"
+      >
+        Let's Do It
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById("main-nav");
+  if (nav) {
+    let lastScroll = 0;
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 60) {
+        nav.style.maxWidth = "800px";
+        nav.style.padding = "0";
+        nav.style.top = "12px";
+        nav.style.backdropFilter = "blur(10px)";
+        nav.style.background = "rgba(10, 10, 15, 0.55)";
+        nav.style.borderColor = "rgba(255, 255, 255, 0.2)";
+        nav.style.boxShadow =
+          "0 12px 50px rgba(0,0,0,0.7), 0 0 40px rgba(5,38,89,0.2), inset 0 1px 0 rgba(255,255,255,0.06)";
+      } else {
+        nav.style.maxWidth = "900px";
+        nav.style.padding = "";
+        nav.style.top = "16px";
+        nav.style.backdropFilter = "blur(10px)";
+        nav.style.background = "rgba(10, 10, 15, 0.55)";
+        nav.style.borderColor = "rgba(255, 255, 255, 0.2)";
+        nav.style.boxShadow =
+          "0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)";
+      }
+      lastScroll = scrollY;
+    });
+  }
+
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  let menuOpen = false;
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      const icon = menuBtn.querySelector(".material-symbols-outlined");
+
+      if (menuOpen) {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+        mobileMenu.style.opacity = "1";
+        if (icon) icon.textContent = "close";
+      } else {
+        mobileMenu.style.maxHeight = "0";
+        mobileMenu.style.opacity = "0";
+        if (icon) icon.textContent = "menu";
+      }
+    });
+  }
+</script>
