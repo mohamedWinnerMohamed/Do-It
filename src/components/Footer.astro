@@ -17,12 +17,14 @@ const footerLinks = [
   </div>
 
   <div class="max-w-7xl mx-auto px-8 py-16">
-    <div class="flex justify-between flex-wrap-reverse md:flex-nowrap gap-16  items-start">
+    <div
+      class="flex justify-between flex-wrap-reverse md:flex-nowrap gap-16 items-start"
+    >
       <div class="w-full">
         <div
           class="text-2xl font-black text-blue-800 uppercase tracking-tighter mb-3"
         >
-          Do It
+          <img src="/logo.png" alt="Do It Logo" class="w-14 h-12" />
         </div>
         <p
           class="text-on-surface-variant text-sm leading-relaxed mb-6 max-w-xs"
@@ -31,10 +33,13 @@ const footerLinks = [
           It
         </p>
         <div
-          class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#ddd]"
-        >
+          class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#ddd] flex flex-col gap-1"
+        ><span>
+
           © {new Date().getFullYear()}
-          <span class="text-blue-500">DO IT</span> ALL RIGHTS RESERVED
+          <span class="text-blue-500">DO IT Software Solutions</span>
+        </span>
+          <span class=""> ALL RIGHTS RESERVED</span>
         </div>
       </div>
 

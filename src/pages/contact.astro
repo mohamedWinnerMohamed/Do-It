@@ -58,7 +58,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     name="name"
                     required
                     class="w-full bg-white/3 border border-white/10 rounded-full py-3 px-6 text-on-surface placeholder:text-neutral-600 focus:ring-1 focus:ring-accent transition-all duration-300 outline-none"
-                    placeholder="Agent of Change"
+                    placeholder="Your Full Name"
                     type="text"
                   />
                 </div>
@@ -128,15 +128,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                   </li>
                   <li
                     class="action-option px-8 py-3 text-white/70 hover:text-white hover:bg-primary/20 cursor-pointer transition-colors"
-                    data-value="Scale on Demand"
-                  >
-                    Scale on Demand
-                  </li>
-                  <li
-                    class="action-option px-8 py-3 text-white/70 hover:text-white hover:bg-primary/20 cursor-pointer transition-colors"
                     data-value="Just Do It (Consulting)"
                   >
                     Just Do It (Consulting)
+                  </li>
+                  <li
+                    class="action-option px-8 py-3 text-white/70 hover:text-white hover:bg-primary/20 cursor-pointer transition-colors"
+                    data-value="Other reason"
+                  >
+                    Other reason (tell us below)
                   </li>
                 </ul>
               </div>
@@ -145,14 +145,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <div class="space-y-2">
               <label
                 class="text-[10px] uppercase tracking-[0.3em] ml-5 text-accent font-bold"
-                >The Brief</label
+                >Tell us about your project</label
               >
               <div class="input-glow rounded-xl">
                 <textarea
                   name="message"
                   required
                   class="w-full bg-white/3 border border-white/10 rounded-xl py-4 px-6 text-on-surface placeholder:text-neutral-600 focus:ring-1 focus:ring-accent transition-all duration-300 resize-none outline-none"
-                  placeholder="What are we doing? Give us the essentials..."
+                  placeholder="Describe your project, goals, and requirements..."
                   rows="5"></textarea>
               </div>
             </div>
@@ -169,7 +169,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               </div>
               <button
                 id="submit-btn"
-                class="w-full sm:w-auto bg-primary text-on-primary font-bold py-4 px-10 rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-sm tracking-tight"
+                class="w-full sm:w-auto bg-primary text-on-primary font-bold py-4 px-10 rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:bg-primary/80 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-sm tracking-tight"
                 type="submit"
               >
                 Make It Happen
@@ -188,7 +188,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <p
             class="text-accent text-xs font-bold uppercase tracking-widest mt-2"
           >
-            — Do It HQ
+            — Do It Software Solution HQ
           </p>
         </div>
       </div>
