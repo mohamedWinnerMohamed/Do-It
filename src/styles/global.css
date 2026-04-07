@@ -2,9 +2,7 @@
 
 /* ===== Tailwind v4 Theme ===== */
 @theme {
-  --color-primary: #052659;
-  --color-primary-light: #0a3d8c;
-  --color-primary-dim: #021430;
+   
   --color-primary-container: #08367a;
   --color-primary-fixed: #1960bf;
   --color-primary-fixed-dim: #0d4b9e;
